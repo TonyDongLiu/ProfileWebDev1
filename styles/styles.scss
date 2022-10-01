@@ -7,32 +7,32 @@
     list-style: none;
 }
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff--secondary: 'Source Code Pro', monospace;
+    --font-primary: 'Source Sans Pro', sans-serif;
+    --font--secondary: 'Source Code Pro', monospace;
 
-    --fw-reg:300;
-    --fw-bold: 900;
+    --fontWeight-reg:300;
+    --fontWeight-bold: 900;
 
-    --clr-light: #fff;
-    --clr-dark:#303030;
-    --clr-accent: #e8b33f;
+    --clr-lightStyle: #fff;
+    --clr-darkStyle:#303030;
+    --clr-mainStyle: #e8b33f;
     --clr-grey-bg: #f6d690;
     --clr-dark-bg: #090909;
 
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
+    --fontSize-h1: 3rem;
+    --fontSize-h2: 2.25rem;
+    --fontSize-h3: 1.25rem;
+    --fontSize-body: 1rem;
 
-    --bs: 0.25rem 0.25rem 0.75rem rgba(0,0,0,.45);
+    --boxShadow: 0.25rem 0.25rem 0.75rem rgba(0,0,0,.45);
 }
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
+        --fontSize-h1: 4.5rem;
+        --fontSize-h2: 3.75rem;
+        --fontSize-h3: 1.5rem;
+        --fontSize-body: 1.125rem;
     }
 }
 
@@ -44,10 +44,10 @@ html {
 body {
     // background-color: var(--clr-light);
     background-color:var(--clr-grey-bg);
-    color: var(--clr-dark);
+    color: var(--clr-darkStyle);
     margin: 0;
-    font-family: var(--ff-primary);
-    font-size: var(--fs-body);
+    font-family: var(--font-primary);
+    font-size: var(--fontSize-body);
     line-height: 1.6;
 }
 
@@ -61,26 +61,26 @@ img {
 }
 
 strong {
-    font-weight: var(--fw-bold);
+    font-weight: var(--fontWeight-bold);
 }
 
 .btn {
     display: inline-block;
     padding: 0.5em 1.5em;
-    background: var(--clr-accent);
-    color: var(--clr-dark);
+    background: var(--clr-mainStyle);
+    color: var(--clr-darkStyle);
     text-decoration: none;
     cursor: pointer;
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: var(--fw-bold);
+    font-weight: var(--fontWeight-bold);
     transition: transform 200ms ease-in-out;
 }
 
 .btn:hover {
     transform: scale(1.1);
-    outline: 3px solid var(--clr-accent);
+    outline: 3px solid var(--clr-mainStyle);
     outline-offset: 3px;
 }
 // Typography
@@ -92,16 +92,16 @@ line-height: 1;
 margin: 0;
 }
 
-h1 { font-size: var(--fs-h1);}
-h2 { font-size: var(--fs-h2);}
-h3 { font-size: var(--fs-h3);}
+h1 { font-size: var(--fontSize-h1);}
+h2 { font-size: var(--fontSize-h2);}
+h3 { font-size: var(--fontSize-h3);}
 
 .section__title {
     margin-bottom: 0.25rem;
 }
 
 .section__title--intro {
-    font-weight: var(--fw-reg);
+    font-weight: var(--fontWeight-reg);
     margin-bottom: 0.5rem;
 }
 
@@ -111,20 +111,20 @@ h3 { font-size: var(--fs-h3);}
 
 .section__subtitle {
     margin: 0;
-    font-size: var(--fs-h3);
+    font-size: var(--fontSize-h3);
 }
 
 .section__subtitle--intro,
 .section__subtitle--about {
-    background-color: var(--clr-accent);
+    background-color: var(--clr-mainStyle);
     padding: 0.25rem;
-    font-family: var(--ff--secondary);
+    font-family: var(--font--secondary);
     margin-bottom: 1rem;
 }
 
 .section__subtitle--work {
-    color: var(--clr-accent);
-    font-weight: var(--fw-bold);
+    color: var(--clr-mainStyle);
+    font-weight: var(--fontWeight-bold);
     margin-bottom: 2em;
 }
 
@@ -145,7 +145,7 @@ header {
 
 .nav {
     position:fixed;
-    background:var(--clr-dark);
+    background:var(--clr-darkStyle);
     color: #fff;
     top: 0;
     left: 0;
@@ -168,14 +168,14 @@ header {
 }
 
 .nav__link {
-    color: var(--clr-light);
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h3);
+    color: var(--clr-lightStyle);
+    font-weight: var(--fontWeight-bold);
+    font-size: var(--fontSize-h3);
     text-decoration: none;
 }
 
 .nav__link:hover {
-    color: var(--clr-accent);
+    color: var(--clr-mainStyle);
 }
 
 .nav-toggle {
@@ -217,7 +217,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-accent);
+    background: var(--clr-mainStyle);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -248,7 +248,7 @@ header {
 }
 
 .intro__img {
-    box-shadow: var(--bs);
+    box-shadow: var(--boxShadow);
 }
 
 .section__subtitle--intro {
@@ -288,11 +288,11 @@ header {
 // My Services Section
 
 .my-services {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-darkStyle);
     background-image: url(../img/OnePieceBackground.jpg);
     background-size:contain;
     background-blend-mode: multiply;
-    color: var(--clr-light);
+    color: var(--clr-lightStyle);
     text-align: center;
 }
 
@@ -301,7 +301,7 @@ header {
 }
 
 .section__title--services {
-    color: var(--clr-accent);
+    color: var(--clr-mainStyle);
     position: relative;
 }
 
@@ -311,7 +311,7 @@ header {
     width: 5rem;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
+    background: var(--clr-lightStyle);
     opacity: 0.5;
 }
 
@@ -340,7 +340,7 @@ header {
 }
 
 .about-me__img {
-    box-shadow: var(--bs);
+    box-shadow: var(--boxShadow);
 }
 
 @media (min-width:600px) {
@@ -377,8 +377,8 @@ header {
 /* My Work*/
 
 .my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-darkStyle);
+    color: var(--clr-lightStyle);
     text-align: center;
 }
 
@@ -389,7 +389,7 @@ header {
 
 .portfolio__item {
     overflow: hidden;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-mainStyle);
 
 }
 
@@ -404,7 +404,7 @@ header {
 .portfolio__img:hover {
     transform: scale(1.05);
     opacity: 0.8;
-    outline: 3px solid var(--clr-accent);
+    outline: 3px solid var(--clr-mainStyle);
     outline-offset: 3px;
 }
 
@@ -412,20 +412,20 @@ header {
 
 .footer {
     background: #222;
-    color: var(--clr-accent);
+    color: var(--clr-mainStyle);
     text-align: center;
     padding: 2.5em 0 0;
-    font-size: var(--fs-h3);
+    font-size: var(--fontSize-h3);
 }
 
 .footer a {
     text-decoration: none;
-    color: var(--clr-accent);
+    color: var(--clr-mainStyle);
 }
 
 .footer__link {
     margin: 1em;
-    font-weight: var(--fw-bold);
+    font-weight: var(--fontWeight-bold);
 }
 
 .social-list {
